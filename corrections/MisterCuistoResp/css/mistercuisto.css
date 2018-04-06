@@ -1,0 +1,209 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    background-color: #0f0e0c;
+    color: #FFF;
+    font-family: 'Oswald', sans-serif;
+    /* opacity: 0;*/
+    animation: apparaitAnimation 0.5s ease 1;
+}
+
+
+/* Présentation du menu */
+
+a {
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    transition: all .3s ease-in-out;
+}
+
+a:hover {
+    color: #CCC;
+}
+
+nav  {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    border-bottom: thin solid #666;
+    padding-bottom: 20px;
+}
+#menu{
+    display: flex;
+    flex-direction: row;
+}
+
+nav a, #menu a {
+    padding: 6px 20px;
+    /* Donnons un peu d'espace au texte */
+    font-size: 24px;
+    color: #FFF;
+    transition: all .3s ease-in-out;
+    /* Animation pour les événements de souris... C'est plus joli */
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    /* Ca, c'est une font de google style écrit à la main */
+}
+
+nav a:hover, #menu a:hover {
+    background-color: #FFF;
+    color: #000;
+}
+
+#burger{
+    display:none;
+}
+#burger a:hover{
+    background:none;
+}
+
+/* Code pour tout le site Internet */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Dancing Script', cursive;
+}
+
+h1 {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+header {
+    background: url("../images/header_bg_2.jpg") top left no-repeat;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    margin: 40px 0;
+    font-size: 0.8em;
+    width: 100%;
+    display: flex;
+}
+
+footer nav {
+    position: relative;
+    margin: auto;
+}
+
+
+/* LA PAGE D'ACCUEIL */
+
+#recettes,
+#valeurs {
+    /*width: 1200px;*/
+}
+
+#recettes {
+    overflow: hidden;
+    margin: auto;
+}
+
+#recettes article a {
+    margin: 0;
+    padding: 0;
+    display: initial;
+}
+
+#recettes article {
+    width: 80vw;
+}
+
+#recettes article img {
+    float: left;
+    margin-right: 30px;
+    margin-left: 5px;
+}
+
+#valeurs article {
+    margin: 20px 10px;
+    padding: 0px 20px 20px;
+    background: rgba(255, 255, 255, 1);
+    color: #000;
+    border: 6px double rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+#valeurs article:hover {
+    transform: scale(1.05);
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 500px;
+    width: 500%;
+    animation: slideAnimation 40s ease infinite;
+}
+
+
+/* LA PAGE DES MENUS */
+
+#menus section:first-of-type {
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+#menus article {
+    width: 50%;
+}
+
+#menus article p {
+    padding: 20px;
+}
+
+
+/* LES FORMULAIRES */
+
+form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+input,
+button,
+textarea {
+    padding: 6px 12px;
+    margin: 0;
+    line-height: 32px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    border: 0;
+    border-bottom: 1px solid #999;
+    align-items: stretch;
+}
+/* Faire apparaître un éléments caché (en display:none) */
+.apparait{
+    display:block !important;
+}
+
+::placeholder {
+    color: #CCC;
+}
