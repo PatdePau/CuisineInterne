@@ -1,0 +1,39 @@
+/* Fichier dédié à la prise en compte des paramètres responsives */
+img{
+    max-width:100%;
+}
+/* Exemples de media queries, ici.
+On utilise max > en dessous de la dimension identifiée, le navigateur prend en compte cette nouvelle mise en page */
+@media (max-width: 576px) {
+    
+}
+
+@media (max-width: 768px) {
+    /* Adaptation de la présentation des articles */
+    section{
+        flex-direction: column;
+    }
+    #menus article {
+        width:100%;
+    }
+    /* Adaptation du menu */
+    nav, #menu{
+        flex-direction: column;
+    }
+    #burger{
+        display:block;
+        align-self:flex-end;
+    }
+    #menu{
+        display:none;
+    }
+
+    /* Les formulaires */
+    form{
+        width:100%;
+    }
+}
+/* Min fonctionne à l'inverse de max */
+@media (min-width: 992px) {  }
+
+@media (min-width: 1200px) {  }
